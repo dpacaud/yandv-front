@@ -1,5 +1,6 @@
 'use strict';
-var API_URL = "http://localhost:5000/"
+//var API_URL = "http://localhost:5000/"
+var API_URL = "http://yandv-rest.herokuapp.com/"
 /* Controllers */
 
 angular.module('yandv.controllers', []).
