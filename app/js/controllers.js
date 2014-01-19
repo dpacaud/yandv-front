@@ -22,15 +22,10 @@ angular.module('yandv.controllers', []).
   .controller('HomeController', ['$scope','$http','$location',function($scope,$http,$location) {
         
     $http.get( API_URL + 'messages').success(function(data) {
-      //console.log(data);
+      
       $scope.messages = data;
     });    
-
-    $scope.testFunc = function(id){
-    	alert("tamere");
-    	//$location.path('/message/'+id);
-    }  
-
+    
   }])
   .controller('ShowController', ['$scope','$http','$location','$routeParams',function($scope,$http,$location,$routeParams) {
     //console.log($routeParams.name)
@@ -47,8 +42,7 @@ angular.module('yandv.controllers', []).
         $scope.message = data;  
       }
       
-    }).error(function(data){
-    	//console.log(data);
+    }).error(function(data){    	
       alert("Une erreur est survenue, merci de réessayer");
     });     
   }]);
